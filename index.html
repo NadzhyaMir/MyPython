@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Python</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='mypy_style.css'>
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src-elem  'unsafe-inline' http://www.pagespeed-mod.com/ https://www.googletagmanager.com/ https://www.google-analytics/">
+    <script src='mypy.js'></script>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <script>const img = [
+            'http://www.cosmopolis.ru/nature/1.jpg',
+            'http://www.cosmopolis.ru/nature/2.jpg',
+            'http://www.cosmopolis.ru/nature/3.jpg',
+            'http://www.cosmopolis.ru/nature/4.jpg',
+            'http://www.cosmopolis.ru/nature/5.jpg',
+            'http://www.cosmopolis.ru/nature/6.jpg',
+            'http://www.cosmopolis.ru/nature/7.jpg',
+            'http://www.cosmopolis.ru/nature/8.jpg',
+            'http://www.cosmopolis.ru/nature/9.jpg',
+            'http://www.cosmopolis.ru/nature/10.jpg',
+            'http://www.cosmopolis.ru/nature/11.jpg',
+            'http://www.cosmopolis.ru/nature/12.jpg',
+            'http://www.cosmopolis.ru/nature/13.jpg',
+            'http://www.cosmopolis.ru/nature/14.jpg',
+            'http://www.cosmopolis.ru/nature/15.jpg',
+            'http://www.cosmopolis.ru/nature/16.jpg',
+            'http://www.cosmopolis.ru/nature/17.jpg',
+            'http://www.cosmopolis.ru/nature/18.jpg',
+            'http://www.cosmopolis.ru/nature/19.jpg',
+            'http://www.cosmopolis.ru/nature/20.jpg',
+            'http://www.cosmopolis.ru/nature/21.jpg',
+            'http://www.cosmopolis.ru/nature/22.jpg',
+            'http://www.cosmopolis.ru/nature/23.jpg',
+            'http://www.cosmopolis.ru/nature/24.jpg',
+            'http://www.cosmopolis.ru/Tahiti/tahiti-pool-lotus.jpg',
+            'http://www.cosmopolis.ru/Tahiti/starwood-resto-md.jpg',
+            'http://www.cosmopolis.ru/maupiti-motu.jpg',
+            'http://www.cosmopolis.ru/italianvistas.jpg',
+            'http://www.cosmopolis.ru/Brazil/salvador4.jpg',
+            'http://www.cosmopolis.ru/Brazil/amazon4.jpg',
+            'http://www.cosmopolis.ru/Brazil/iguassu4.jpg',
+            'http://www.cosmopolis.ru/Brazil/iguassu6.jpg',
+            'http://www.cosmopolis.ru/ireland/cliffs.jpg',
+        ];
+
+
+        let count = img.length
+
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
+
+
+        function randInt(min, max) {
+            let rand = min + Math.random() * (max + 1 - min);
+            return Math.floor(rand);
+        }
+        const cover = document.querySelector('.cover');
+        function init() {
+            //const cover = document.querySelector('.cover');
+            shuffle(img);
+            for (let i = 0; i < img.length; i++) {
+                let card = document.createElement('div')
+                card.classList.add('card')
+                //card.style.background = 'url("http://www.cosmopolis.ru/Tahiti/' + img[i]'")';
+                //card.style.background = `url("http://www.cosmopolis.ru/Tahiti/${img[i]}")`;
+                card.style.background = `url('${img[i]}')`;
+                card.style.backgroundSize = 'cover';
+                card.style.transform = `rotate(${randInt(-15, 15)}deg) translate(${randInt(-40, 40)}px, ${randInt(-40, 40)}px)`;
+                cover.append(card);
+            }
+        }
+
+        init();
+
+
+        cover.addEventListener('click', event => {
+            const cover = document.querySelector('.cover');
+            if (event.target.classList.contains('card')) {
+                event.target.classList.add('go');
+            }
+        });
+    </script>
+</body>
+
+</html>
