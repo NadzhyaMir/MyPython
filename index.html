@@ -14,119 +14,68 @@
 
 <body>
     <h1>Hello World!</h1>
-    <script>
-        let in1 = document.querySelector('.in1'); //input
-        let in2 = document.querySelector('.in2'); //input
-        let add = document.querySelector('.add'); //button
-        let mult = document.querySelector('.mult'); //button
-        let out1 = document.querySelector('.out1'); //output
-        let out2 = document.querySelector('.out2'); //output
-        add.onclick = function () {
-            //Кнопка нажата
-            let a = +in1.value;
-            let b = +in2.value;
-            console.log(a + b);
-            out1.innerHTML = (a + b)
-        }
+    <hr width=60%>
+    <div>
+        <p align="center">
+        <table>
+            <tr>
+                <td>Введите число:</td>
+                <td colspan="2"><input type="number" class="in1">
+                </td>
+            <tr>
+                <td>Введите число:</td>
+                <td colspan="2"><input type="number" class="in2">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align=right><button class="add">Сложить</button><br>
+                </td>
+                <td align=right><button class="mult">Перемножить</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td tdborder bordercolor="ffffff" align=right>
+                    <font color=purple size="3"><b>
+                            <div class="out1" align="center"><br>
+                            </div>
+                        </b></font>
+                </td>
+                <td bgcolor="ffffff" align=right>
+                    <font color=bordo size="3">
+                        <b>
+                            <div class="out2" align="center"><br>
+                            </div>
+                        </b>
+                    </font>
+                </td>
+            </tr>
 
-        mult.onclick = function () {
-            let a = +in1.value;
-            let b = +in2.value;
-            console.log(a * b);
-            out2.innerHTML = (a * b);
-            in1.value = '';
-            in2.value = '';
-        }
-        document.querySelector('.color').addEventListener('click', () => {
-            let out3 = document.querySelector('.in3').value;
-            document.querySelector('.out3').innerHTML = out3;
-        });
-    </script>
-    <center>
-        <div class="container">
-            <center>
-                <div class="cover">
-                    <center>
-                </div>
-        </div>
-    </center>
-
-
-
-    <script>const img = [
-            'http://www.cosmopolis.ru/nature/1.jpg',
-            'http://www.cosmopolis.ru/nature/2.jpg',
-            'http://www.cosmopolis.ru/nature/3.jpg',
-            'http://www.cosmopolis.ru/nature/4.jpg',
-            'http://www.cosmopolis.ru/nature/5.jpg',
-            'http://www.cosmopolis.ru/nature/6.jpg',
-            'http://www.cosmopolis.ru/nature/7.jpg',
-            'http://www.cosmopolis.ru/nature/8.jpg',
-            'http://www.cosmopolis.ru/nature/9.jpg',
-            'http://www.cosmopolis.ru/nature/10.jpg',
-            'http://www.cosmopolis.ru/nature/11.jpg',
-            'http://www.cosmopolis.ru/nature/12.jpg',
-            'http://www.cosmopolis.ru/nature/13.jpg',
-            'http://www.cosmopolis.ru/nature/14.jpg',
-            'http://www.cosmopolis.ru/nature/15.jpg',
-            'http://www.cosmopolis.ru/nature/16.jpg',
-            'http://www.cosmopolis.ru/nature/17.jpg',
-            'http://www.cosmopolis.ru/nature/18.jpg',
-            'http://www.cosmopolis.ru/nature/19.jpg',
-            'http://www.cosmopolis.ru/nature/20.jpg',
-            'http://www.cosmopolis.ru/nature/21.jpg',
-            'http://www.cosmopolis.ru/nature/22.jpg',
-            'http://www.cosmopolis.ru/nature/23.jpg',
-            'http://www.cosmopolis.ru/nature/24.jpg',
-            'http://www.cosmopolis.ru/Tahiti/tahiti-pool-lotus.jpg',
-            'http://www.cosmopolis.ru/Tahiti/starwood-resto-md.jpg',
-            'http://www.cosmopolis.ru/maupiti-motu.jpg',
-            'http://www.cosmopolis.ru/italianvistas.jpg',
-            'http://www.cosmopolis.ru/Brazil/salvador4.jpg',
-            'http://www.cosmopolis.ru/Brazil/amazon4.jpg',
-            'http://www.cosmopolis.ru/Brazil/iguassu4.jpg',
-            'http://www.cosmopolis.ru/Brazil/iguassu6.jpg',
-            'http://www.cosmopolis.ru/ireland/cliffs.jpg',
-        ];
+        </table>
+        </p>
+    </div>
+    <div>
+        <center>Выберите цвет:<input type="color" class="in3">
+            <br>
+            <button class="color">Узнать код цвета:</button>
 
 
-        let count = img.length
-
-        function shuffle(array) {
-            array.sort(() => Math.random() - 0.5);
-        }
-
-
-        function randInt(min, max) {
-            let rand = min + Math.random() * (max + 1 - min);
-            return Math.floor(rand);
-        }
-        const cover = document.querySelector('.cover');
-        function init() {
-            //const cover = document.querySelector('.cover');
-            shuffle(img);
-            for (let i = 0; i < img.length; i++) {
-                let card = document.createElement('div')
-                card.classList.add('card')
-                //card.style.background = 'url("http://www.cosmopolis.ru/Tahiti/' + img[i]'")';
-                //card.style.background = `url("http://www.cosmopolis.ru/Tahiti/${img[i]}")`;
-                card.style.background = `url('${img[i]}')`;
-                card.style.backgroundSize = 'cover';
-                card.style.transform = `rotate(${randInt(-15, 15)}deg) translate(${randInt(-40, 40)}px, ${randInt(-40, 40)}px)`;
-                cover.append(card);
-            }
-        }
-
-        init();
+            <font size=3><b>
+                    <div class="out3" align="center"><br>
+                    </div>
+                </b>
+            </font><br><br>
 
 
-        cover.addEventListener('click', event => {
-            const cover = document.querySelector('.cover');
-            if (event.target.classList.contains('card')) {
-                event.target.classList.add('go');
-            }
-        });
-    </script>
+
+
+            <img src="http://cosmopolis.ru/Tahiti/magenta-lrg.gif" alt="">
+        </center>
+    </div>
+    <hr>
+
 </body>
 
 </html>
