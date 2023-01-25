@@ -208,7 +208,6 @@
                     card.style.transform = `rotate(${randInt(-15, 15)}deg) translate(${randInt(-40, 40)}px, ${randInt(-40, 40)}px)`;
                     cover.append(card);
                 }
-                button.addEventListener('click', () => window.location.reload());
             }
 
             init();
@@ -218,6 +217,7 @@
                 const cover = document.querySelector('.cover');
                 if (event.target.classList.contains('card')) {
                     event.target.classList.add('go');
+                else button.addEventListener('click', () => window.location.reload());
                 }
             });
         </script>
