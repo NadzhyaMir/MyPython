@@ -1,19 +1,113 @@
-<!DOCTYPE html>
-<html>
+<HTML>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>My Python</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='mypy_style.css'>
+<HEAD>
+    <TITLE>Mathematician Nadzhya Mir | Математик Мир Наджя Абдул Вахидовна</TITLE>
     <meta http-equiv="Content-Security-Policy"
-        content="script-src-elem  'unsafe-inline' http://www.pagespeed-mod.com/ https://www.googletagmanager.com/ https://www.google-analytics/">
-    <script src='mypy.js'></script>
+        content="script-src-elem  'unsafe-inline' http://www.cosmopolis/    http://www.pagespeed-mod.com/ https://www.googletagmanager.com/ https://www.google-analytics/">
+
+    <style>
+        <!-- .container {
+        align: center;
+        width: 50%;
+        }
+        -->
+    </style>
+
+    <style>
+        <!-- .cover {
+        padding: 0px;
+        border: 2px solid #ffffff;
+        min-height: 450px;
+        position: relative;
+        }
+        -->
+    </style>
+    <style type="text/css">
+        <!-- .card {
+        width: 70%;
+        height: 70%;
+        box-shadow: 3px 5px 8px #333;
+        position: absolute;
+        transform: rotate(45deg) translate(100px, 100px);
+        transition: all ease 8s;
+        left: 10%;
+        top: 15%;
+        }
+        -->
+    </style>
+
+    <style>
+        <!-- .go {
+        left: -99999px;
+        }
+        -->
+    </style>
+
 </head>
 
-<body>
-    <h1>Hello World!</h1>
+<BODY bgcolor=silver>
+    <font size="2" face=Tahoma>
+        <p align=center>
+            <img src="MirNA.jpg" width="170" alt="Мир Н.А.">
+        </p>
+        <hr width=60%>
+        <h1 align=center>
+            <font face=Times> Преподаватель математики</font>
+        </h1>
+        <hr width=60%>
+        <h2 align=center>
+            <font face=Times>Мир Наджя Абдул Вахидовна<br><i>Обращаться можно: Надежда Вахидовна.</i></font>
+            </h1>
+            <p align=center>
+                <br>Телефон/WhatsApp/Viber/Telegram: +7 (985) 2206186
+                <br>Mail: NadzhyaMir@yandex.ru
+                <br>ИНН 770102115371
+                <br>Преподаю математику студентам вузов, школьникам, начиная с 8 класса, всем желающим взрослым.
+                <br>Занятия проводятся он-лайн или у меня дома:
+                <br>г. Москва, Хитровская площадь.
+                <br>Метро: Китай-город, Курская, Чкаловская
+                <br>Остановка трамвая: "Воронцово поле. Высшая школа экономики."
+                <br>Остановка автобуса: "Улица Солянка".
+                <br>Дополнительная информация и отзывы на сайте
+                <a href="https://profi.ru/profile/MirNA/" target="_blank" title="mathematician Nadzhya Mir">
+                    <b>ПРОФИ.РУ</b>
+                </a>
+            </p>
+            <hr width=60%>
+            <h2 align=center>Предметы:</h2>
+            <table align=center>
+                <tr>
+                    <td>
+                        <h2>Высшая математика</h2>
+                        <li>Математический анализ
+                        <li>Линейная алгебра
+                        <li>Аналитическая геометрия
+                        <li>Высшая математика
+                            Дискретная математика
+                        <li>Математическая логика и теория алгоритмов
+                        <li>Теория групп
+                        <li>Теория графов
+                        <li>Комбинаторика
+                        <li>Функциональный анализ
+                        <li>Дифференциальные уравнения
+                        <li>Теория вероятностей и математическая статистика
+                        <li>Теория функций комплексного переменного
+                            <h2>Элементарная математика</h2>
+                        <li>Все предметы школьной программы 8-11 классов
+                        <li>Подготовка к ЕГЭ
+                        <li>Подготовка к олимпиадам
+                            <h2>Программирование</h2>
+                        <li>Основы HTML, Python, PHP, JavaScript, SQL, C++
+                        <li>Системное программирование
+                            <h2>Информатика</h2>
+                        <li>Информатика для школьников
+                    </td>
+                </tr>
+            </table>
+    </font>
+
+    </font>
+
     <hr width=60%>
     <div>
         <p align="center">
@@ -74,8 +168,125 @@
             <img src="http://cosmopolis.ru/Tahiti/magenta-lrg.gif" alt="">
         </center>
     </div>
-    <hr>
+    <br>
 
-</body>
 
-</html>
+
+    <script>
+        let in1 = document.querySelector('.in1'); //input
+        let in2 = document.querySelector('.in2'); //input
+        let add = document.querySelector('.add'); //button
+        let mult = document.querySelector('.mult'); //button
+        let out1 = document.querySelector('.out1'); //output
+        let out2 = document.querySelector('.out2'); //output
+        add.onclick = function () {
+            //Кнопка нажата
+            let a = +in1.value;
+            let b = +in2.value;
+            console.log(a + b);
+            out1.innerHTML = (a + b)
+        }
+
+        mult.onclick = function () {
+            let a = +in1.value;
+            let b = +in2.value;
+            console.log(a * b);
+            out2.innerHTML = (a * b);
+            in1.value = '';
+            in2.value = '';
+        }
+        document.querySelector('.color').addEventListener('click', () => {
+            let out3 = document.querySelector('.in3').value;
+            document.querySelector('.out3').innerHTML = out3;
+        });
+    </script>
+    <center>
+        <div class="container">
+            <center>
+                <div class="cover">
+                    <center>
+                </div>
+        </div>
+    </center>
+
+
+
+    <script>const img = [
+            'http://www.cosmopolis.ru/nature/1.jpg',
+            'http://www.cosmopolis.ru/nature/2.jpg',
+            'http://www.cosmopolis.ru/nature/3.jpg',
+            'http://www.cosmopolis.ru/nature/4.jpg',
+            'http://www.cosmopolis.ru/nature/5.jpg',
+            'http://www.cosmopolis.ru/nature/6.jpg',
+            'http://www.cosmopolis.ru/nature/7.jpg',
+            'http://www.cosmopolis.ru/nature/8.jpg',
+            'http://www.cosmopolis.ru/nature/9.jpg',
+            'http://www.cosmopolis.ru/nature/10.jpg',
+            'http://www.cosmopolis.ru/nature/11.jpg',
+            'http://www.cosmopolis.ru/nature/12.jpg',
+            'http://www.cosmopolis.ru/nature/13.jpg',
+            'http://www.cosmopolis.ru/nature/14.jpg',
+            'http://www.cosmopolis.ru/nature/15.jpg',
+            'http://www.cosmopolis.ru/nature/16.jpg',
+            'http://www.cosmopolis.ru/nature/17.jpg',
+            'http://www.cosmopolis.ru/nature/18.jpg',
+            'http://www.cosmopolis.ru/nature/19.jpg',
+            'http://www.cosmopolis.ru/nature/20.jpg',
+            'http://www.cosmopolis.ru/nature/21.jpg',
+            'http://www.cosmopolis.ru/nature/22.jpg',
+            'http://www.cosmopolis.ru/nature/23.jpg',
+            'http://www.cosmopolis.ru/nature/24.jpg',
+            'http://www.cosmopolis.ru/Tahiti/tahiti-pool-lotus.jpg',
+            'http://www.cosmopolis.ru/Tahiti/starwood-resto-md.jpg',
+            'http://www.cosmopolis.ru/maupiti-motu.jpg',
+            'http://www.cosmopolis.ru/italianvistas.jpg',
+            'http://www.cosmopolis.ru/Brazil/salvador4.jpg',
+            'http://www.cosmopolis.ru/Brazil/amazon4.jpg',
+            'http://www.cosmopolis.ru/Brazil/iguassu4.jpg',
+            'http://www.cosmopolis.ru/Brazil/iguassu6.jpg',
+            'http://www.cosmopolis.ru/ireland/cliffs.jpg',
+        ];
+
+
+        let count = img.length
+
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
+
+
+        function randInt(min, max) {
+            let rand = min + Math.random() * (max + 1 - min);
+            return Math.floor(rand);
+        }
+        const cover = document.querySelector('.cover');
+        function init() {
+            //const cover = document.querySelector('.cover');
+            shuffle(img);
+            for (let i = 0; i < img.length; i++) {
+                let card = document.createElement('div')
+                card.classList.add('card')
+                //card.style.background = 'url("http://www.cosmopolis.ru/Tahiti/' + img[i]'")';
+                //card.style.background = `url("http://www.cosmopolis.ru/Tahiti/${img[i]}")`;
+                card.style.background = `url('${img[i]}')`;
+                card.style.backgroundSize = 'cover';
+                card.style.transform = `rotate(${randInt(-15, 15)}deg) translate(${randInt(-40, 40)}px, ${randInt(-40, 40)}px)`;
+                cover.append(card);
+            }
+        }
+
+        init();
+
+
+        cover.addEventListener('click', event => {
+            const cover = document.querySelector('.cover');
+            if (event.target.classList.contains('card')) {
+                event.target.classList.add('go');
+            }
+        });
+    </script>
+
+
+</BODY>
+
+</HTML>
