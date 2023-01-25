@@ -14,6 +14,45 @@
 
 <body>
     <h1>Hello World!</h1>
+    <script>
+        let in1 = document.querySelector('.in1'); //input
+        let in2 = document.querySelector('.in2'); //input
+        let add = document.querySelector('.add'); //button
+        let mult = document.querySelector('.mult'); //button
+        let out1 = document.querySelector('.out1'); //output
+        let out2 = document.querySelector('.out2'); //output
+        add.onclick = function () {
+            //Кнопка нажата
+            let a = +in1.value;
+            let b = +in2.value;
+            console.log(a + b);
+            out1.innerHTML = (a + b)
+        }
+
+        mult.onclick = function () {
+            let a = +in1.value;
+            let b = +in2.value;
+            console.log(a * b);
+            out2.innerHTML = (a * b);
+            in1.value = '';
+            in2.value = '';
+        }
+        document.querySelector('.color').addEventListener('click', () => {
+            let out3 = document.querySelector('.in3').value;
+            document.querySelector('.out3').innerHTML = out3;
+        });
+    </script>
+    <center>
+        <div class="container">
+            <center>
+                <div class="cover">
+                    <center>
+                </div>
+        </div>
+    </center>
+
+
+
     <script>const img = [
             'http://www.cosmopolis.ru/nature/1.jpg',
             'http://www.cosmopolis.ru/nature/2.jpg',
