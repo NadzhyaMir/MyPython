@@ -46,12 +46,11 @@
 </head>
 
 <BODY bgcolor="e8a1a1">
+    <br><br>
+    <h1 align=center>
+        <font face="century gothic" color="6a0126"><b>Hello World!</b></font>
+    </h1>
     <font size="2" face=Tahoma>
-
-        <h1 align=center>
-            <font face="vagabond" color="6c008a">Hello World!</font>
-        </h1>
-
         <hr width=60%>
         <div>
             <p align="center">
@@ -81,7 +80,7 @@
                                 </div>
                             </b></font>
                     </td>
-                    <td bgcolor="ffffff" align=right>
+                    <td align=right>
                         <font color=bordo size="3">
                             <b>
                                 <div class="out2" align="center"><br>
@@ -144,82 +143,99 @@
                 document.querySelector('.out3').innerHTML = out3;
             });
         </script>
-        <center>
-            <div class="container">
-                <center>
-                    <div class="cover">
+    </font>
+    <center>
+        <font face="tahoma" size="4" color="6a0126"><b>
+                Кликай по центру верхнего фото!</b>
+        </font>
+    </center>
+    </h2>
+    <br>
+    <center>
+        <div class="container">
+            <center>
+                <div class="cover">
+                    <br><br><br><br><br><br>
+
+                    <h2>
                         <center>
-                    </div>
-            </div>
-        </center>
+                            <font face="tahoma" size="3" color="6a0126">Кликни, чтобы повторить!</font>
+                        </center>
+                    </h2>
 
 
-
-        <script>const img = [
-                '1.jpg',
-                '2.jpg',
-                '3.jpg',
-                '4.jpg',
-                '5.jpg',
-                '6.jpg',
-                '7.jpg',
-                '8.jpg',
-                '9.jpg',
-                '10.jpg',
-                '11.jpg',
-                '12.jpg',
-                '13.jpg',
-                '14.jpg',
-                '15.jpg',
-                '16.jpg',
-                '17.jpg',
-                '18.jpg',
-                '19.jpg',
-                '20.jpg',
-                '21.jpg',
-                '22.jpg',
-                '23.jpg',
-                '24.jpg',
-            ];
+                </div>
+        </div>
+    </center>
 
 
-            let count = img.length
+    <script>const img = [
+            '1.jpg',
+            '2.jpg',
+            '3.jpg',
+            '4.jpg',
+            '5.jpg',
+            '6.jpg',
+            '7.jpg',
+            '8.jpg',
+            '9.jpg',
+            '10.jpg',
+            '11.jpg',
+            '12.jpg',
+            '13.jpg',
+            '14.jpg',
+            '15.jpg',
+            '16.jpg',
+            '17.jpg',
+            '18.jpg',
+            '19.jpg',
+            '20.jpg',
+            '21.jpg',
+            '22.jpg',
+            '23.jpg',
+            '24.jpg',
+        ];
 
-            function shuffle(array) {
-                array.sort(() => Math.random() - 0.5);
+
+        let count = img.length
+
+        function shuffle(array) {
+            array.sort(() => Math.random() - 0.5);
+        }
+
+
+        function randInt(min, max) {
+            let rand = min + Math.random() * (max + 1 - min);
+            return Math.floor(rand);
+        }
+        const cover = document.querySelector('.cover');
+        function init() {
+            //const cover = document.querySelector('.cover');
+            shuffle(img);
+            for (let i = 0; i < img.length; i++) {
+                let card = document.createElement('div')
+                card.classList.add('card')
+                //card.style.background = 'url("http://www.cosmopolis.ru/Tahiti/' + img[i]'")';
+                //card.style.background = `url("http://www.cosmopolis.ru/Tahiti/${img[i]}")`;
+                card.style.background = `url('${img[i]}')`;
+                card.style.backgroundSize = 'cover';
+                card.style.transform = `rotate(${randInt(-15, 15)}deg) translate(${randInt(-40, 40)}px, ${randInt(-40, 40)}px)`;
+                cover.append(card);
             }
+        }
+
+        init();
 
 
-            function randInt(min, max) {
-                let rand = min + Math.random() * (max + 1 - min);
-                return Math.floor(rand);
-            }
+        cover.addEventListener('click', event => {
             const cover = document.querySelector('.cover');
-            function init() {
-                //const cover = document.querySelector('.cover');
-                shuffle(img);
-                for (let i = 0; i < img.length; i++) {
-                    let card = document.createElement('div')
-                    card.classList.add('card')
-                    //card.style.background = 'url("http://www.cosmopolis.ru/Tahiti/' + img[i]'")';
-                    //card.style.background = `url("http://www.cosmopolis.ru/Tahiti/${img[i]}")`;
-                    card.style.background = `url('${img[i]}')`;
-                    card.style.backgroundSize = 'cover';
-                    card.style.transform = `rotate(${randInt(-15, 15)}deg) translate(${randInt(-40, 40)}px, ${randInt(-40, 40)}px)`;
-                    cover.append(card);
-                }
+            if (event.target.classList.contains('card')) {
+                event.target.classList.add('go');
+
             }
-
-            init();
-
-
-            cover.addEventListener('click', event => {
-                const cover = document.querySelector('.cover');
-                if (event.target.classList.contains('card')) {
-                    event.target.classList.add('go');
-                }
-            });
-        </script>
+            else { window.location.reload() }
+        });
+    </script>
 
 
 </BODY>
